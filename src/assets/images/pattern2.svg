@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="238px" height="267px" viewBox="0 0 238 267" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Pattern Copy</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.1">
+        <g id="Home-Page-2" transform="translate(-1179.000000, -1580.000000)" stroke="#003E7E">
+            <g id="Group-9" transform="translate(-202.000000, 0.000000)">
+                <g id="News\" transform="translate(202.000000, 1488.000000)">
+                    <g id="Pattern-Copy" transform="translate(1298.000000, 225.500000) scale(1, -1) rotate(90.000000) translate(-1298.000000, -225.500000) translate(1165.000000, 107.000000)">
+                        <path d="M127.142189,3.5 L64,114.985427 L0.857811128,3.5 L127.142189,3.5 Z" id="Rectangle" transform="translate(64.000000, 59.500000) scale(1, -1) translate(-64.000000, -59.500000) "></path>
+                        <path d="M265.142189,3.5 L202,114.985427 L138.857811,3.5 L265.142189,3.5 Z" id="Rectangle" transform="translate(202.000000, 59.500000) scale(1, -1) translate(-202.000000, -59.500000) "></path>
+                        <path d="M196.142189,0.5 L133,111.985427 L69.8578111,0.5 L196.142189,0.5 Z" id="Rectangle"></path>
+                        <path d="M127.142189,121.5 L64,232.985427 L0.857811128,121.5 L127.142189,121.5 Z" id="Rectangle"></path>
+                        <path d="M265.142189,121.5 L202,232.985427 L138.857811,121.5 L265.142189,121.5 Z" id="Rectangle"></path>
+                        <path d="M196.142189,124.5 L133,235.985427 L69.8578111,124.5 L196.142189,124.5 Z" id="Rectangle" transform="translate(133.000000, 180.500000) scale(1, -1) translate(-133.000000, -180.500000) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,67 +1,25 @@
-// /** @type {import('tailwindcss').Config} */
-// import defaultTheme from 'tailwindcss/defaultTheme';
-// import forms from '@tailwindcss/forms';
-
-// export default {
-//   content: [
-//     './src/**/*.{js,jsx,ts,tsx}', // Scans all JS/JSX/TS/TSX files in src
-//     './public/index.html', // Scans the main HTML file
-//   ],
-//   theme: {
-//     extend: {
-//       fontFamily: {
-//         sans: ['Figtree', ...defaultTheme.fontFamily.sans],
-//       },
-//     },
-//   },
-//   plugins: [forms],
-// };
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}", // Updated to include React-specific file extensions in the src directory
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        primary: '#0B947B',
-        primary2: '#DC5AE7',
-        secondary: '#f4f4f4',
-        background: '#fAFFFE',
-        heading: '#ff4d4f',
-        text: '#ff4d4f',
-        btn: '#ff4d4f',
-        btnHover: '#ff4d4f',
-        link: '#ff4d4f',
-        linkHover: '#ff4d4f',
-        success: '#28a745',
-        error: '#dc3545',
-        warning: '#ffc107',
-      },
-      screens: {
-        'xl': { max: '1600px' },
-        'lg': { max: '1280px' },
-        'md': { max: '992px' },
-        'sm': { max: '768px' },
-        'xsm': { max: '480px' },
-      },
-      fontSize: {
-        'xs': '.75rem',
-        'sm': '.875rem',
-        'base': '1rem',
-        'md': '1.5rem',
-        'lg': '2rem',
-        'xlg': '3rem',
+        // الألوان المستوحاة من الموقع
+        primary: '#2563eb',      // أزرق
+        secondary: '#7c3aed',   // بنفسجي
+        dark: '#01020e',        // خلفية داكنة
+        light: '#f8fafc',       // خلفية فاتحة
+        accent: '#06b6d4',      // لون مميز سماوي
       },
       fontFamily: {
-        primaryFont: ['Tajawal', 'sans-serif'],
-        secondaryFont: ['Merriweather', 'serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['Poppins', 'sans-serif'],
       },
-      boxShadow: {
-        'custom': '0px 2px 8px 0px rgba(99, 99, 99, 0.2)',
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-in-out',
+        'slide-up': 'slideUp 0.3s ease-out',
       },
     },
   },
   plugins: [],
-};
+}

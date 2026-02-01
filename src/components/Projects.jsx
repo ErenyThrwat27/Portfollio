@@ -1,7 +1,7 @@
 // Projects.jsx - مع جميع المشاريع من السيرة الذاتية
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Globe, Users, Clock, Award, Zap, Code, ChevronRight, Sparkles, Phone, Building, Shield, Car, Home, ShoppingCart, Cloud, ClipboardCheck, Heart, Lock, MessageSquare } from 'lucide-react';
+import { ExternalLink, Github, Globe, Users, Clock, Award, Zap, Code, ChevronRight, Sparkles, Phone, Building, Shield, Car, Home, ShoppingCart, Cloud, ClipboardCheck, Heart, Lock, MessageSquare, BookOpen, GraduationCap, Database, Server, Cpu } from 'lucide-react';
 
 const Projects = () => {
   const [filter, setFilter] = useState('all');
@@ -13,14 +13,14 @@ const Projects = () => {
       title: 'SafeHer Reporting Platform',
       status: 'completed',
       year: '2025',
-      type: ['team', 'bootcamp', 'frontend'],
+      type: ['team', 'bootcamp', 'frontend', 'training'],
       category: 'web',
       description: 'Secure anonymous reporting system with multilingual support, emergency features, and encrypted communications for women safety. Award-winning project from Women Techsters Bootcamp.',
-      tags: ['React', 'Security', 'i18n', 'UI/UX', 'Team Project', 'Women Safety', 'Encryption'],
+      tags: ['React', 'JavaScript', 'HTML5', 'CSS3', 'REST APIs', 'Team Project', 'Women Safety', 'Bootcamp'],
       metrics: {
         'Award': '🏆 Top Project',
-        'Features': '10+',
-        'Languages': '3'
+        'Languages': '3',
+        'Type': 'Bootcamp'
       },
       links: {
         live: 'https://safeher-ten.vercel.app',
@@ -35,23 +35,24 @@ const Projects = () => {
       highlights: [
         'Multilingual support (3 languages)',
         'Secure anonymous reporting system',
-        'Emergency features & encrypted communications'
+        'Top Final Project Award'
       ],
-      award: true
+      award: true,
+      training: true
     },
     {
       id: 2,
       title: 'CityPhone Platform',
       status: 'completed',
       year: '2025-2026',
-      type: ['team', 'frontend'],
+      type: ['team', 'frontend', 'professional','freelance'],
       category: 'web',
       description: 'Cross-functional Agile team project focusing on e-commerce platform. Led performance optimization, reduced page load time by ~40% through refactored state management and centralized API calls.',
       tags: ['React', 'TypeScript', 'TailwindCSS', 'REST APIs', 'Git', 'Agile/Scrum', 'Performance', 'State Management'],
       metrics: {
         'Load Time': '-40%',
         'Team Size': 'Agile Team',
-        'Tech Stack': '5+'
+        'Duration': '3 Months'
       },
       links: {
         live: 'https://cityphone.sa7ret-elqalam.blog/ar/login',
@@ -62,7 +63,7 @@ const Projects = () => {
       gradient: 'bg-gradient-to-br from-blue-500/20 via-blue-600/15 to-cyan-500/10',
       role: 'Frontend Developer',
       duration: '3 months',
-      company: 'Team Project',
+      company: 'Professional Project',
       highlights: [
         'Performance optimization after identifying bottlenecks',
         'Reduced unnecessary re-renders',
@@ -74,14 +75,14 @@ const Projects = () => {
       title: 'MedTek Health Platform',
       status: 'completed',
       year: '2025',
-      type: ['freelance', 'fullstack'],
+      type: ['freelance', 'fullstack', 'team','frontend'],
       category: 'web',
       description: 'Large-scale healthcare marketplace with distributed team. Integrated RESTful APIs, implemented interactive dashboards, and fixed critical token scope issues.',
       tags: ['React', 'TypeScript', 'REST APIs', 'Charts', 'Git', 'UI/UX', 'Dashboards'],
       metrics: {
         'Team Size': '5 Members',
         'Data Errors': '-50%',
-        'Modules': 'Multiple'
+        'Duration': '4 Months'
       },
       links: {
         live: 'https://medtek.sa7ret-elqalam.blog',
@@ -104,17 +105,17 @@ const Projects = () => {
       title: 'Orion Design Engineering',
       status: 'completed',
       year: '2025',
-      type: ['freelance', 'frontend'],
+      type: ['freelance', 'frontend', 'team'],
       category: 'web',
       description: 'Corporate website with responsive design. Translated Figma to React components, implemented lazy loading and image optimization.',
       tags: ['React', 'JavaScript', 'HTML5', 'CSS3', 'REST APIs', 'Figma', 'Performance'],
       metrics: {
         'Team Size': '3 Members',
         'Load Time': 'Optimized',
-        'Responsive': 'Yes'
+        'Experience': 'First API'
       },
       links: {
-        live: 'https://oriondesigeng.com'
+        live: 'https://oriondesigning.com'
       },
       icon: '🏢',
       iconComponent: <Building className="w-8 h-8" />,
@@ -133,10 +134,10 @@ const Projects = () => {
       title: 'Car Rental Management System',
       status: 'completed',
       year: '2024-2025',
-      type: ['fullstack', 'backend'],
+      type: ['fullstack', 'backend', 'personal'],
       category: 'backend',
       description: 'Full-stack system with cars, bookings, and user management. Optimized database queries, improved booking processing by 25%.',
-      tags: ['Laravel', 'MySQL', 'RESTful APIs', 'Authentication', 'Database', 'Full Stack'],
+      tags: ['Laravel', 'MySQL', 'RESTful APIs', 'Authentication', 'Database', 'Full Stack', 'Blade'],
       metrics: {
         'Processing': '+25%',
         'Backend': 'Laravel',
@@ -151,7 +152,7 @@ const Projects = () => {
       gradient: 'bg-gradient-to-br from-orange-500/20 via-amber-600/15 to-yellow-500/10',
       role: 'Full Stack Developer',
       duration: 'Project',
-      company: 'Personal',
+      company: 'Personal Project',
       highlights: [
         'Optimized database queries',
         'RESTful APIs with authentication',
@@ -163,7 +164,7 @@ const Projects = () => {
       title: 'Re7lty API 2 & Qiem API 2',
       status: 'completed',
       year: '2025',
-      type: ['backend', 'training'],
+      type: ['backend', 'training', 'api'],
       category: 'backend',
       description: 'Backend API development and optimization during Huma-volve training. Improved server response time by 30%, integrated third-party services.',
       tags: ['Laravel', 'API Development', 'Optimization', 'Integration', 'REST', 'Production'],
@@ -186,78 +187,173 @@ const Projects = () => {
         'API response time improved by 30%',
         'Third-party service integration',
         'Production edge cases handling'
-      ]
+      ],
+      training: true
     },
-    {
-      id: 7,
-      title: 'Freelance Projects',
-      status: 'active',
-      year: '2025-Present',
-      type: ['freelance', 'frontend'],
-      category: 'web',
-      description: 'Multiple freelance projects on Upwork using React, JavaScript, Bootstrap. Translated client requirements into technical tasks.',
-      tags: ['React', 'JavaScript', 'Bootstrap', 'HTML5', 'CSS3', 'Freelance', 'Client'],
-      metrics: {
-        'Projects': 'Multiple',
-        'Platform': 'Upwork',
-        'Client': 'Various'
-      },
-      links: {
-        upwork: '#',
-        portfolio: '#'
-      },
-      icon: '💼',
-      iconComponent: <ClipboardCheck className="w-8 h-8" />,
-      gradient: 'bg-gradient-to-br from-indigo-500/20 via-violet-600/15 to-purple-500/10',
-      role: 'Frontend Developer',
-      duration: 'Ongoing',
-      company: 'Upwork Freelance',
-      highlights: [
-        'Client requirement analysis',
-        'Independent task management',
-        'Business needs delivery'
-      ]
-    },
+    // {
+    //   id: 7,
+    //   title: 'Freelance Projects - Upwork',
+    //   status: 'active',
+    //   year: '2025-Present',
+    //   type: ['freelance', 'frontend'],
+    //   category: 'web',
+    //   description: 'Multiple freelance projects on Upwork using React, JavaScript, Bootstrap. Translated client requirements into technical tasks.',
+    //   tags: ['React', 'JavaScript', 'Bootstrap', 'HTML5', 'CSS3', 'Freelance', 'Client'],
+    //   metrics: {
+    //     'Projects': 'Multiple',
+    //     'Platform': 'Upwork',
+    //     'Client': 'Various'
+    //   },
+    //   links: {
+    //     upwork: '#',
+    //     portfolio: '#'
+    //   },
+    //   icon: '💼',
+    //   iconComponent: <ClipboardCheck className="w-8 h-8" />,
+    //   gradient: 'bg-gradient-to-br from-indigo-500/20 via-violet-600/15 to-purple-500/10',
+    //   role: 'Frontend Developer',
+    //   duration: 'Ongoing',
+    //   company: 'Upwork Freelance',
+    //   highlights: [
+    //     'Client requirement analysis',
+    //     'Independent task management',
+    //     'Business needs delivery'
+    //   ]
+    // },
     {
       id: 8,
-      title: 'E-Commerce Dashboard',
+      title: 'Frontend Development Training - RTC',
       status: 'completed',
       year: '2024',
-      type: ['frontend', 'training'],
+      type: ['training', 'frontend', 'education'],
       category: 'web',
-      description: 'Interactive admin dashboard for e-commerce with real-time analytics, order management, and customer insights.',
-      tags: ['React', 'Redux', 'Chart.js', 'Material-UI', 'Dashboard', 'Analytics'],
+      description: 'Comprehensive training in frontend development covering HTML5, CSS3, JavaScript and React.js fundamentals.',
+      tags: ['HTML5', 'CSS3', 'JavaScript', 'React.js', 'Training', 'Fundamentals'],
       metrics: {
-        'Components': '25+',
-        'Charts': '8',
-        'Responsive': 'Yes'
+        'Skills': '4 Core',
+        'Level': 'Beginner-Intermediate',
+        'Type': 'Training'
       },
       links: {
-        live: '#',
-        github: '#'
+        certificate: '#',
+        materials: '#'
       },
-      icon: '📊',
-      iconComponent: <ShoppingCart className="w-8 h-8" />,
+      icon: '📚',
+      iconComponent: <BookOpen className="w-8 h-8" />,
       gradient: 'bg-gradient-to-br from-cyan-500/20 via-sky-600/15 to-blue-500/10',
-      role: 'Frontend Developer',
-      duration: '2 months',
-      company: 'Training Project',
+      role: 'Trainee',
+      duration: 'Course',
+      company: 'RTC Training',
       highlights: [
-        'Real-time analytics dashboard',
-        'Order management system',
-        'Customer insights visualization'
-      ]
-    }
+        'HTML5 & CSS3 fundamentals',
+        'JavaScript programming',
+        'React.js basics'
+      ],
+      training: true
+    },
+    {
+      id: 9,
+      title: 'Backend Development - UN Women Scholarship',
+      status: 'completed',
+      year: '2024',
+      type: ['training', 'backend', 'education'],
+      category: 'backend',
+      description: 'Advanced Laravel training covering MVC architecture, authentication, RESTful APIs, PHP fundamentals, and MySQL basics.',
+      tags: ['Laravel', 'PHP', 'MySQL', 'MVC', 'Authentication', 'REST APIs'],
+      metrics: {
+        'Focus': 'Advanced Laravel',
+        'Scholarship': 'UN Women',
+        'Topics': '6+'
+      },
+      links: {
+        certificate: '#',
+        materials: '#'
+      },
+      icon: '🎓',
+      iconComponent: <GraduationCap className="w-8 h-8" />,
+      gradient: 'bg-gradient-to-br from-emerald-500/20 via-teal-600/15 to-green-500/10',
+      role: 'Scholarship Student',
+      duration: 'Course',
+      company: 'UN Women Program',
+      highlights: [
+        'Advanced Laravel concepts',
+        'MVC architecture',
+        'RESTful API development'
+      ],
+      training: false
+    },
+    // {
+    //   id: 10,
+    //   title: 'C Programming - Gammal Tech',
+    //   status: 'completed',
+    //   year: '2024',
+    //   type: ['training', 'fundamentals', 'education'],
+    //   category: 'fundamentals',
+    //   description: 'Fundamental programming concepts and C language training covering algorithms, data structures, and problem-solving.',
+    //   tags: ['C Programming', 'Algorithms', 'Data Structures', 'Fundamentals'],
+    //   metrics: {
+    //     'Language': 'C',
+    //     'Focus': 'Fundamentals',
+    //     'Provider': 'Gammal Tech'
+    //   },
+    //   links: {
+    //     certificate: '#',
+    //     materials: '#'
+    //   },
+    //   icon: '⚙️',
+    //   iconComponent: <Cpu className="w-8 h-8" />,
+    //   gradient: 'bg-gradient-to-br from-gray-500/20 via-gray-600/15 to-slate-500/10',
+    //   role: 'Student',
+    //   duration: 'Course',
+    //   company: 'Gammal Tech',
+    //   highlights: [
+    //     'Programming fundamentals',
+    //     'C language syntax',
+    //     'Problem-solving skills'
+    //   ],
+    //   training: true
+    // },
+    // {
+    //   id: 11,
+    //   title: 'Database Management - MySQL',
+    //   status: 'completed',
+    //   year: '2024-2025',
+    //   type: ['backend', 'database', 'skills'],
+    //   category: 'backend',
+    //   description: 'Practical experience with MySQL database design, optimization, query writing, and integration with Laravel applications.',
+    //   tags: ['MySQL', 'Database', 'Queries', 'Optimization', 'Laravel'],
+    //   metrics: {
+    //     'Experience': 'Practical',
+    //     'Integration': 'Laravel',
+    //     'Focus': 'Optimization'
+    //   },
+    //   links: {
+    //     projects: '#',
+    //     documentation: '#'
+    //   },
+    //   icon: '💾',
+    //   iconComponent: <Database className="w-8 h-8" />,
+    //   gradient: 'bg-gradient-to-br from-amber-500/20 via-orange-600/15 to-red-500/10',
+    //   role: 'Developer',
+    //   duration: 'Ongoing',
+    //   company: 'Skill Development',
+    //   highlights: [
+    //     'Database design',
+    //     'Query optimization',
+    //     'Laravel integration'
+    //   ]
+    // }
   ];
 
   const filters = [
     { id: 'all', label: 'All Projects', icon: <Sparkles className="w-4 h-4" /> },
     { id: 'frontend', label: 'Frontend', icon: <Code className="w-4 h-4" /> },
     { id: 'backend', label: 'Backend', icon: <Cloud className="w-4 h-4" /> },
-    { id: 'fullstack', label: 'Full Stack', icon: <Zap className="w-4 h-4" /> },
+    
     { id: 'team', label: 'Team Projects', icon: <Users className="w-4 h-4" /> },
     { id: 'freelance', label: 'Freelance', icon: <Award className="w-4 h-4" /> },
-    { id: 'bootcamp', label: 'Bootcamp', icon: <MessageSquare className="w-4 h-4" /> }
+    { id: 'training', label: 'Training', icon: <BookOpen className="w-4 h-4" /> },
+    { id: 'bootcamp', label: 'Bootcamp', icon: <GraduationCap className="w-4 h-4" /> }
   ];
 
   const filteredProjects = filter === 'all' 
@@ -283,15 +379,15 @@ const Projects = () => {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6">
             <Sparkles className="w-4 h-4 text-blue-400" />
-            <span className="text-sm font-medium text-blue-400">Professional Portfolio</span>
+            <span className="text-sm font-medium text-blue-400">Professional & Training Portfolio</span>
           </div>
           
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 animate-gradient">Projects</span>
+            Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 animate-gradient">Projects & Training</span>
           </h2>
           
           <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
-            Real-world projects showcasing technical expertise, problem-solving, and business impact
+            Comprehensive portfolio showcasing professional projects, training programs, and skill development
           </p>
         </motion.div>
 
@@ -304,10 +400,10 @@ const Projects = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 lg:mb-12"
         >
           {[
-            { label: 'Projects Completed', value: '8+', color: 'text-blue-400', icon: <Award className="w-4 h-4" /> },
+            { label: 'Total Projects', value: '11+', color: 'text-blue-400', icon: <Award className="w-4 h-4" /> },
             { label: 'Performance Gain', value: 'Up to 40%', color: 'text-green-400', icon: <Zap className="w-4 h-4" /> },
-            { label: 'Team Experience', value: 'Agile Teams', color: 'text-purple-400', icon: <Users className="w-4 h-4" /> },
-            { label: 'Award Winning', value: 'Top Project', color: 'text-yellow-400', icon: <Sparkles className="w-4 h-4" /> }
+            { label: 'Team Projects', value: '5+', color: 'text-purple-400', icon: <Users className="w-4 h-4" /> },
+            { label: 'Training Programs', value: '4+', color: 'text-yellow-400', icon: <BookOpen className="w-4 h-4" /> }
           ].map((stat, idx) => (
             <div key={idx} className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:border-blue-500/30 transition-all group">
               <div className="flex items-center gap-3 mb-2">
@@ -360,7 +456,7 @@ const Projects = () => {
         </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {filteredProjects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -384,6 +480,16 @@ const Projects = () => {
                   <div className="px-3 py-1 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full text-xs font-bold text-white flex items-center gap-1 shadow-lg">
                     <Sparkles className="w-3 h-3" />
                     Award Winner
+                  </div>
+                </div>
+              )}
+
+              {/* Training Badge */}
+              {project.training && (
+                <div className="absolute -top-2 -left-2 z-20">
+                  <div className="px-3 py-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full text-xs font-bold text-white flex items-center gap-1 shadow-lg">
+                    <BookOpen className="w-3 h-3" />
+                    Training
                   </div>
                 </div>
               )}
@@ -420,9 +526,11 @@ const Projects = () => {
                       <div className={`px-2 py-1 rounded-full text-xs font-semibold backdrop-blur-sm ${
                         project.status === 'active'
                           ? 'bg-green-500/20 text-green-400 border border-green-500/30'
+                          : project.training
+                          ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30'
                           : 'bg-blue-500/20 text-blue-400 border border-blue-500/30'
                       }`}>
-                        {project.status === 'active' ? '🚀' : '✅'}
+                        {project.status === 'active' ? '🚀' : project.training ? '📚' : '✅'}
                       </div>
                     </div>
                     
@@ -447,7 +555,7 @@ const Projects = () => {
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-1.5 mb-4">
-                    {project.tags.slice(0, 3).map((tag, idx) => (
+                    {project.tags.slice(0, 4).map((tag, idx) => (
                       <span
                         key={idx}
                         className="px-2 py-1 text-xs rounded-lg bg-gray-800/50 text-gray-300 border border-gray-700/50 hover:border-blue-500/50 hover:text-blue-300 transition-colors"
@@ -455,9 +563,9 @@ const Projects = () => {
                         {tag}
                       </span>
                     ))}
-                    {project.tags.length > 3 && (
+                    {project.tags.length > 4 && (
                       <span className="px-2 py-1 text-xs rounded-lg bg-gray-800/30 text-gray-500 border border-gray-700/30">
-                        +{project.tags.length - 3}
+                        +{project.tags.length - 4}
                       </span>
                     )}
                   </div>
@@ -503,6 +611,18 @@ const Projects = () => {
                           Admin
                         </a>
                       )}
+                      {project.links.certificate && (
+                        <a
+                          href={project.links.certificate}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group/link flex items-center gap-1 px-3 py-1.5 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 rounded-lg text-xs font-medium text-white transition-all duration-300 shadow shadow-purple-900/30"
+                        >
+                          <BookOpen className="w-3 h-3" />
+                          Certificate
+                          <ChevronRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all" />
+                        </a>
+                      )}
                     </div>
                     
                     <div className="flex items-center gap-1">
@@ -540,10 +660,10 @@ const Projects = () => {
           className="text-center mt-12 lg:mt-16"
         >
           <div className="max-w-2xl mx-auto mb-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Want to Collaborate?</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">Comprehensive Developer Journey</h3>
             <p className="text-gray-300 mb-6">
-              Each project represents real business impact and technical challenges solved. 
-              Ready to work on your next big idea?
+              This portfolio showcases my journey from training programs to professional projects, 
+              highlighting continuous learning and practical application of skills.
             </p>
           </div>
           
@@ -560,7 +680,7 @@ const Projects = () => {
               className="group relative px-8 py-3.5 bg-gradient-to-r from-gray-800 to-gray-900 hover:from-gray-700 hover:to-gray-800 text-gray-300 hover:text-white font-semibold rounded-xl border border-gray-700 hover:border-blue-500/50 transition-all overflow-hidden"
             >
               <span className="relative flex items-center gap-2">
-                Contact for Projects
+                Contact for Collaboration
                 <MessageSquare className="w-4 h-4 group-hover:scale-110 transition-transform" />
               </span>
             </a>

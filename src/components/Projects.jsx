@@ -668,12 +668,12 @@ const Projects = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="group relative px-8 py-3.5 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-xl transition-all overflow-hidden shadow-lg shadow-blue-900/30">
+            {/* <button className="group relative px-8 py-3.5 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-xl transition-all overflow-hidden shadow-lg shadow-blue-900/30">
               <span className="relative flex items-center gap-2">
                 View Detailed Case Studies
                 <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </span>
-            </button>
+            </button> */}
             
             <a 
               href="#contact"

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import logoImage from '/src/assets/images/89_letter_e.jpg'; 
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,12 +16,10 @@ const Navbar = () => {
   const scrollToSection = (href) => {
     const element = document.querySelector(href);
     if (element) {
-      // حساب الموقع مع تعويض ارتفاع النافبار
       const navbarHeight = 80; 
       const elementTop = element.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = elementTop - navbarHeight;
 
-      // استخدام window.scrollTo مع behavior smooth
       window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth'
@@ -45,17 +42,37 @@ const Navbar = () => {
     }
   };
 
+  // SVG كـ React component
+  const LogoIcon = () => (
+    <svg 
+      width="40" 
+      height="40" 
+      viewBox="0 0 100 100" 
+      className="rounded-full border-2 border-dark"
+    >
+      <defs>
+        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#3b82f6" />
+          <stop offset="100%" stopColor="#06b6d4" />
+        </linearGradient>
+      </defs>
+      
+      <rect width="100" height="100" rx="15" fill="url(#logoGradient)" />
+      
+      <path 
+        d="M25,25 L75,25 L75,35 L35,35 L35,50 L65,50 L65,60 L35,60 L35,75 L75,75 L75,85 L25,85 Z" 
+        fill="white"
+      />
+    </svg>
+  );
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg shadow-lg animate-fade-in">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo/Name مع الصورة والاسم بدون حرف E */}
-          <div className="flex items-center space-x-2">
-            <img 
-              src={logoImage} 
-              alt="E Logo" 
-              className="w-10 h-10 rounded-full object-cover border-2 border-dark"
-            />
+          {/* Logo/Name مع SVG */}
+          <div className="flex items-center space-x-0.5">
+            <LogoIcon />
             <span className="text-3xl font-heading font-bold text-dark">
               reny
             </span>

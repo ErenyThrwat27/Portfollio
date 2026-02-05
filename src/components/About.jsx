@@ -154,26 +154,30 @@ const About = () => {
       <div className="grid lg:grid-cols-2 gap-12">
         {/* النص */}
         <div className="space-y-6">
-          <p className="text-gray-300 leading-relaxed">
-            Full Stack Developer with <strong>1+ year</strong> of hands-on professional experience 
-            building production-ready web applications using <strong>Laravel, PHP, MySQL, React, 
-            TypeScript, and TailwindCSS</strong>.
-          </p>
-          <p className="text-gray-300 leading-relaxed">
-            Experienced in developing <strong>secure authentication systems</strong>, designing 
-            <strong> RESTful APIs</strong>, integrating <strong>third-party APIs</strong>, and 
-            building <strong>real-time dashboards</strong>.
-          </p>
-          <p className="text-gray-300 leading-relaxed">
-            Selected from <strong>10,000+ global applicants</strong> for the 
-            <strong> Women Techsters Bootcamp 2025</strong> — a testament to my technical 
-            capabilities and dedication to growth in the tech industry.
-          </p>
-          <p className="text-gray-300 leading-relaxed">
-            Passionate about creating efficient, scalable solutions that solve real-world 
-            problems while maintaining clean code architecture and exceptional user experiences.
-          </p>
-        </div>
+  <p className="text-gray-300 leading-relaxed">
+    Full Stack Developer with <strong>1+ year</strong> of hands-on professional experience 
+    within collaborative development teams, building <strong>scalable and production-ready web applications</strong> 
+    using <strong>React, TypeScript, TailwindCSS, Laravel, PHP, and MySQL</strong>.
+  </p>
+  <p className="text-gray-300 leading-relaxed">
+    Experienced in <strong>optimizing application performance</strong>, developing 
+    <strong> secure authentication systems</strong>, designing <strong>RESTful APIs</strong>, 
+    integrating <strong>third-party services</strong>, and building <strong>real-time dashboards</strong>.
+  </p>
+  <p className="text-gray-300 leading-relaxed">
+    Proven ability to <strong>solve real-world technical challenges</strong> and deliver 
+    <strong> high-quality, user-focused solutions</strong> through Agile team-based development.
+  </p>
+  <p className="text-gray-300 leading-relaxed">
+    Selected from <strong>10,000+ global applicants</strong> for the 
+    <strong> Women Techsters Bootcamp 2025</strong> — a testament to my technical 
+    capabilities and dedication to growth in the tech industry.
+  </p>
+  <p className="text-gray-300 leading-relaxed">
+    Passionate about creating <strong>efficient, scalable solutions</strong> that solve real-world 
+    problems while maintaining clean code architecture and exceptional user experiences.
+  </p>
+</div>
         
         {/* الإحصاءات */}
         <div id="stats-container" className="grid grid-cols-2 gap-6">

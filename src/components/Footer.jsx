@@ -207,7 +207,7 @@ const Footer = () => {
             <div className="text-gray-500 text-sm">
               <span className="text-blue-400">v1.0</span>
               <span className="mx-2">•</span>
-              Last updated: Dec 2024
+              Last updated: <span className="text-blue-400">Feb 2026</span>
             </div>
           </div>
         </div>

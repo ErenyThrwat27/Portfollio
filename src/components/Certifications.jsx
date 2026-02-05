@@ -52,7 +52,7 @@ const certificateImages = [
     id: 3,
     title: 'Frontend Development Course',
     issuer: 'RTC Training Center',
-    date: 'October 2024',
+    date: 'FEB 2025',
     imageUrl: RTCImage, 
     description: 'Comprehensive frontend development training with modern web technologies',
     category: 'frontend',
@@ -76,7 +76,7 @@ const certificateImages = [
     imageUrl: DatabaseImage , 
     description: 'Practical database management and optimization skills',
     category: 'php',
-    verified: false
+    verified: true
   }
 ];
 
@@ -339,13 +339,13 @@ const Certifications = () => {
                       <Maximize2 className="w-4 h-4 group-hover/btn:scale-110 transition-transform" />
                       View Full Size
                     </button>
-                    <button
+                    {/* <button
                       onClick={() => downloadCertificate(cert.imageUrl, cert.title)}
                       className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-lg text-gray-300 hover:text-white transition-all group/btn"
                       title="Download Certificate"
                     >
                       <Download className="w-4 h-4 group-hover/btn:scale-110 transition-transform" />
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>

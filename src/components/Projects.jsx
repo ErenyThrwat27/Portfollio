@@ -235,7 +235,7 @@ const Projects = () => {
         'Type': 'Training'
       },
       links: {
-        certificate: '#',
+        // certificate: '#',
         materials: '#'
       },
       icon: '📚',
@@ -266,7 +266,7 @@ const Projects = () => {
         'Topics': '6+'
       },
       links: {
-        certificate: '#',
+        // certificate: '#',
         materials: '#'
       },
       icon: '🎓',

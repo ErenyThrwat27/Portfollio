@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('#home'); // حالة لتتبع القسم النشط
 
   const navItems = [
     { name: 'Home', href: '#home' },
@@ -12,6 +13,34 @@ const Navbar = () => {
     { name: 'Certifications', href: '#certifications' },
     { name: 'Contact', href: '#contact' },
   ];
+
+  // تتبع قسم النشط أثناء التمرير
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = navItems.map(item => item.href.substring(1));
+      
+      // البحث عن القسم الحالي الذي يتم عرضه
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const navbarHeight = 80;
+          
+          // إذا كان القسم في منتصف الشاشة تقريباً
+          if (rect.top <= navbarHeight && rect.bottom >= navbarHeight) {
+            setActiveSection(`#${section}`);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    // تنفيذ مرة أولى عند التحميل
+    handleScroll();
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const scrollToSection = (href) => {
     const element = document.querySelector(href);
@@ -26,6 +55,7 @@ const Navbar = () => {
       });
     }
     setIsMenuOpen(false);
+    setActiveSection(href); // تحديث القسم النشط عند النقر
   };
 
   const handleLetsTalk = () => {
@@ -39,6 +69,7 @@ const Navbar = () => {
         top: offsetPosition,
         behavior: 'smooth'
       });
+      setActiveSection('#contact'); // تعيين القسم النشط عند النقر
     }
   };
 
@@ -80,20 +111,33 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection(item.href);
-                }}
-                className="text-gray-600 hover:text-dark font-medium text-lg transition-colors duration-300 relative group"
-              >
-                {item.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
-              </a>
-            ))}
+            {navItems.map((item) => {
+              const isActive = activeSection === item.href;
+              return (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(item.href);
+                  }}
+                  className={`
+                    font-medium text-lg transition-colors duration-300 relative group
+                    ${isActive ? 'text-blue-800' : 'text-gray-600 hover:text-blue-800'}
+                  `}
+                >
+                  {item.name}
+                  {/* الخط الأزرق - دائم الظهور للعنصر النشط */}
+                  <span 
+                    className={`
+                      absolute bottom-0 left-0 h-0.5 bg-blue-600 
+                      transition-all duration-300
+                      ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}
+                    `}
+                  ></span>
+                </a>
+              );
+            })}
           </div>
 
           {/* CTA Button */}
@@ -130,19 +174,28 @@ const Navbar = () => {
         }`}
       >
         <div className="px-4 py-6 space-y-4">
-          {navItems.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection(item.href);
-              }}
-              className="block py-3 px-4 text-gray-700 hover:text-dark hover:bg-gray-50 rounded-lg text-lg font-medium transition-colors"
-            >
-              {item.name}
-            </a>
-          ))}
+          {navItems.map((item) => {
+            const isActive = activeSection === item.href;
+            return (
+              <a
+                key={item.name}
+                href={item.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(item.href);
+                }}
+                className={`
+                  block py-3 px-4 rounded-lg text-lg font-medium transition-colors
+                  ${isActive 
+                    ? 'text-blue-800 bg-blue-50 border-l-4 border-blue-600' 
+                    : 'text-gray-700 hover:text-blue-800 hover:bg-gray-50'
+                  }
+                `}
+              >
+                {item.name}
+              </a>
+            );
+          })}
           <button
             onClick={() => {
               handleLetsTalk();

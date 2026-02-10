@@ -16,7 +16,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   // إعدادات واتساب
-  const whatsappNumber = "+201227333071";
+  const whatsappNumber = "+201227333061";
   const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/\D/g, '')}`;
 
   const socialLinks = [

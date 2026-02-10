@@ -21,7 +21,7 @@ const Contact = () => {
   const formRef = useRef();
 
   // إعدادات واتساب
-  const whatsappNumber = "+201227333071";
+  const whatsappNumber = "+201227333061";
   const whatsappMessage = "Hello! I saw your portfolio and would like to discuss...";
   const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/\D/g, '')}?text=${encodeURIComponent(whatsappMessage)}`;
 
